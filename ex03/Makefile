@@ -2,6 +2,8 @@ NAME= Zombie
 
 
 SRC= main.cpp\
+	ZombieHorde.cpp\
+	Zombie.cpp\
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -15,11 +17,11 @@ $(NAME): $(OBJ)
 all: $(NAME)
 
 clean:
-	@rm $(OBJ)
+	@rm -rf $(OBJ)
 	@echo "Cleaned all 'o' files successfully"
 
 fclean: clean
-	@rm $(NAME)
+	@rm -rf $(NAME)
 	@echo "Cleaned Program name successfully"
 
 re: fclean all
