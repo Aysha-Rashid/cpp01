@@ -18,11 +18,11 @@ $(NAME): $(OBJ)
 all: $(NAME)
 
 clean:
-	@rm -rf $(OBJ)
+	@rm $(OBJ)
 	@echo "Cleaned all 'o' files successfully"
 
 fclean: clean
-	@rm -rf $(NAME)
+	@rm $(NAME)
 	@echo "Cleaned Program name successfully"
 
 re: fclean all
