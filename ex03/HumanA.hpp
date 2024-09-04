@@ -5,17 +5,16 @@
 #include <string>
 #include <iostream>
 
-class HumanA {
-private:
-    std::string name;
-    Weapon& weapon;
+class HumanA
+{
+	private:
+		std::string name;
+		Weapon &weapon;
 
-public:
-    HumanA(const std::string& name, Weapon& weapon) : name(name), weapon(weapon) {}
-
-    void attack() const {
-        std::cout << name << " attacks with their " << weapon.getType() << std::endl;
-    }
+	public:
+		HumanA(const std::string &localname, Weapon &localweapon);
+		~HumanA();
+		void attack();
 };
 
 #endif
