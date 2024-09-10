@@ -5,14 +5,10 @@ void    text::replace(std::string s1, std::string replace)
 {
 	std::string line;
 	size_t pos;
-	text t;
 	std::ifstream inFile(this->in_file);
 	std::ofstream outFile(this->out_file);
 	if (!outFile.is_open())
-	{
-		std::cerr << "Error opening output file!" << std::endl;
-		return ;
-	}
+		(std::cerr << "Error opening output file!" << std::endl, exit(0));
 	while (std::getline(inFile, line))
 	{
 		while ((pos = line.find(s1)) != std::string::npos)
@@ -40,9 +36,9 @@ void    text::open_new_file(std::string str)
 }
 int main(int argc, char **argv)
 {
-	text file;
 	if (argc != 4)
-		return (std::cout << "not right number of input" << std::endl, 1);
+		(std::cout << "not right number of input" << std::endl, exit(0));
+	text file;
 	if (argv[1])
 		file.open_new_file(argv[1]);
 	file.replace(argv[2], argv[3]);
