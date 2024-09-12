@@ -9,6 +9,7 @@ int main()
 	while (n > i)
 	{
 		zombie[i].announce();
+		
 		i++;
 	}
 	delete [] zombie;

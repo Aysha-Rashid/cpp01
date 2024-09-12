@@ -11,7 +11,7 @@ class   text
 		std::string out_file;
 	public:
 		void    open_new_file(std::string);
-		void    replace(std::string s1, std::string replace);
+		void    change(std::string s1, std::string replace);
 };
 
 #endif

@@ -3,7 +3,6 @@ NAME= Harl
 
 SRC= main.cpp\
 	Harl.cpp\
-	# Weapon.cpp\
 
 OBJ = $(SRC:.cpp=.o)
 
